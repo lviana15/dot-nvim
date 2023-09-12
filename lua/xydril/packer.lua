@@ -42,6 +42,17 @@ return require('packer').startup(function(use)
     use("tpope/vim-fugitive")
     use("nvim-treesitter/nvim-treesitter-context");
 
+    use({
+        "roobert/tailwindcss-colorizer-cmp.nvim",
+        -- optionally, override the default options:
+        config = function()
+            require("tailwindcss-colorizer-cmp").setup({
+                color_square_width = 2,
+            })
+        end
+    })
+    use("NvChad/nvim-colorizer.lua");
+
     use {
         'VonHeikemen/lsp-zero.nvim',
         branch = 'v1.x',
