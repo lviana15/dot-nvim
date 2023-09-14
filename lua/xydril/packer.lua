@@ -76,7 +76,13 @@ return require('packer').startup(function(use)
         }
     }
 
+    use {
+        "windwp/nvim-autopairs",
+        config = function() require("nvim-autopairs").setup {} end
+    }
+
     use("folke/zen-mode.nvim")
     use("eandrju/cellular-automaton.nvim")
     use("laytan/cloak.nvim")
+    use("nvim-tree/nvim-web-devicons")
 end)
