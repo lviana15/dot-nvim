@@ -13,7 +13,11 @@ return require('packer').startup(function(use)
         requires = { { 'nvim-lua/plenary.nvim' } }
     }
 
-    use "EdenEast/nightfox.nvim" -- Packer
+    use {
+        'nvim-lualine/lualine.nvim',
+        requires = { 'nvim-tree/nvim-web-devicons', opt = true }
+    }
+
     use "rebelot/kanagawa.nvim"
     use "savq/melange-nvim"
 
@@ -40,7 +44,6 @@ return require('packer').startup(function(use)
     use("theprimeagen/refactoring.nvim")
     use("mbbill/undotree")
     use("tpope/vim-fugitive")
-    use("nvim-treesitter/nvim-treesitter-context");
 
     use({
         "roobert/tailwindcss-colorizer-cmp.nvim",
