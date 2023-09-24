@@ -1,9 +1,9 @@
 require("xydril.set")
 require("xydril.remap")
-vim.cmd.colorscheme("kanagawa-dragon")
+vim.cmd.colorscheme('catppuccin-mocha')
 
 local augroup = vim.api.nvim_create_augroup
-local ThePrimeagenGroup = augroup('ThePrimeagen', {})
+local xydrilGroup = augroup('xydril', {})
 
 local autocmd = vim.api.nvim_create_autocmd
 local yank_group = augroup('HighlightYank', {})
@@ -24,7 +24,7 @@ autocmd('TextYankPost', {
 })
 
 autocmd({ "BufWritePre" }, {
-    group = ThePrimeagenGroup,
+    group = xydrilGroup,
     pattern = "*",
     command = [[%s/\s\+$//e]],
 })
