@@ -1,6 +1,6 @@
 require("xydril.set")
 require("xydril.remap")
-vim.cmd.colorscheme('catppuccin-mocha')
+vim.cmd.colorscheme('bore')
 
 local augroup = vim.api.nvim_create_augroup
 local xydrilGroup = augroup('xydril', {})

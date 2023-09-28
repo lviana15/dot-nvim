@@ -21,6 +21,7 @@ return require('packer').startup(function(use)
     use "rebelot/kanagawa.nvim"
     use "savq/melange-nvim"
     use { "catppuccin/nvim", as = "catppuccin" }
+    use 'sixfourtwelve/bore.vim'
 
     use({
         "folke/trouble.nvim",
