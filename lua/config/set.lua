@@ -26,3 +26,25 @@ vim.opt.signcolumn = "yes"
 vim.opt.updatetime = 50
 
 vim.opt.colorcolumn = "80"
+
+vim.diagnostic.config({
+  underline = true,
+  virtual_text = true,
+  signs = {
+    text = {
+      [vim.diagnostic.severity.ERROR] = "",
+      [vim.diagnostic.severity.WARN]  = "",
+      [vim.diagnostic.severity.INFO]  = "",
+      [vim.diagnostic.severity.HINT]  = "󰌵",
+    },
+    linehl = {
+      [vim.diagnostic.severity.ERROR] = "DiagnosticLineError",
+      [vim.diagnostic.severity.WARN] = "DiagnosticLineWarn",
+      [vim.diagnostic.severity.INFO] = "DiagnosticLineInfo",
+      -- [vim.diagnostic.severity.HINT] = "DiagnosticLineHint",
+    },
+  },
+  -- float
+  -- update_in_insert
+  servirty_sort = true,
+})
